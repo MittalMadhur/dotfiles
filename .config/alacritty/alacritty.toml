@@ -1,0 +1,16 @@
+# Alacritty font configuration (TOML style)
+[font]
+# Regular font
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+# Bold font
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+# Italic font
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
