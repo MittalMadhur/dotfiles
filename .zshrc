@@ -58,6 +58,7 @@ alias nv='nvim'
 #fzf
 
 # cat better alternative
+alias bat='batcat'
 alias cat='bat'
 export BAT_THEME=tokyonight_night
 
