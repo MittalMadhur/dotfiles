@@ -85,4 +85,7 @@ POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 # Set Git alias
 alias gs='git status'
-alias bazel='bazel-7.4.1'
+
+# Set bazel cmds
+# source <(bazel completion bash)
+
