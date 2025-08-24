@@ -18,6 +18,16 @@ vim.g.mapleader = " "
 
 local plugins = {
     {
+        "folke/noice.nvim",
+        event = "VeryLazy",
+        opts = {
+        },
+        dependencies = {
+            "MunifTanjim/nui.nvim",
+            "rcarriga/nvim-notify",
+        }
+    },
+    {
         "folke/tokyonight.nvim",
         lazy = false,
         priority = 1000,
@@ -62,6 +72,7 @@ local plugins = {
     'tpope/vim-fugitive',
     'mbbill/undotree',
     'nvim-lua/plenary.nvim',
+    'voldikss/vim-floaterm',
     -- Github copilot
     {
         "git@github.com:github/copilot.vim",
@@ -73,6 +84,7 @@ local plugins = {
         'hrsh7th/nvim-cmp',
         event = "InsertEnter",
         dependencies = {
+            'hrsh7th/cmp-cmdline',
             'hrsh7th/cmp-nvim-lsp',
             'hrsh7th/cmp-nvim-lua',
             'hrsh7th/cmp-buffer',

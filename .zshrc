@@ -62,9 +62,9 @@ alias bat='batcat'
 alias cat='bat'
 export BAT_THEME=tokyonight_night
 
-# thefuck alias
-eval $(thefuck --alias)
-alias tf='fuck'
+# # thefuck alias
+# eval $(thefuck --alias)
+# alias tf='fuck'
 
 # Colorful, icons, classify (shows / for dirs, * for executables, etc.)
 alias ls='eza --icons --color=auto --group-directories-first'
