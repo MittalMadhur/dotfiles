@@ -1,5 +1,29 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
+
+-- make w and q easier
+vim.keymap.set("n", "<leader>q", vim.cmd.q)
+vim.keymap.set("n", "<leader>w", vim.cmd.w)
+
+-- Split Vim like tmux
+vim.keymap.set("n", "<leader>-", vim.cmd.sp)
+vim.keymap.set("n", "<leader>|", vim.cmd.vsp)
+
+-- Move between splits like tmux
+vim.keymap.set("n", "<leader>h", "<C-w>h", { desc = "Move left split" })
+vim.keymap.set("n", "<leader>j", "<C-w>j", { desc = "Move down split" })
+vim.keymap.set("n", "<leader>k", "<C-w>k", { desc = "Move up split" })
+vim.keymap.set("n", "<leader>l", "<C-w>l", { desc = "Move right split" })
+
+-- Equalize splits
+vim.keymap.set("n", "<leader>=", "<C-w>=", { desc = "Equalize splits" })
+
+-- Resize splits (like tmux resize-pane)
+vim.keymap.set("n", "<leader><Left>",  "<C-w><")
+vim.keymap.set("n", "<leader><Right>", "<C-w>>")
+vim.keymap.set("n", "<leader><Up>",    "<C-w>+")
+vim.keymap.set("n", "<leader><Down>",  "<C-w>-")
+--
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -49,35 +73,33 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set(
-    "n",
-    "<leader>ee",
-    "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
-)
+-- vim.keymap.set(
+--     "n",
+--     "<leader>ee",
+--     "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
+-- )
+-- 
+-- vim.keymap.set(
+--     "n",
+--     "<leader>ea",
+--     "oassert.NoError(err, \"\")<Esc>F\";a"
+-- )
+-- 
+-- vim.keymap.set(
+--     "n",
+--     "<leader>ef",
+--     "oif err != nil {<CR>}<Esc>Olog.Fatalf(\"error: %s\\n\", err.Error())<Esc>jj"
+-- )
+-- 
+-- vim.keymap.set(
+--     "n",
+--     "<leader>el",
+--     "oif err != nil {<CR>}<Esc>O.logger.Error(\"error\", \"error\", err)<Esc>F.;i"
+-- )
 
-vim.keymap.set(
-    "n",
-    "<leader>ea",
-    "oassert.NoError(err, \"\")<Esc>F\";a"
-)
+-- vim.keymap.set("n", "<leader>ca", function()
+--     require("cellular-automaton").start_animation("make_it_rain")
+-- end)
 
-vim.keymap.set(
-    "n",
-    "<leader>ef",
-    "oif err != nil {<CR>}<Esc>Olog.Fatalf(\"error: %s\\n\", err.Error())<Esc>jj"
-)
-
-vim.keymap.set(
-    "n",
-    "<leader>el",
-    "oif err != nil {<CR>}<Esc>O.logger.Error(\"error\", \"error\", err)<Esc>F.;i"
-)
-
-vim.keymap.set("n", "<leader>ca", function()
-    require("cellular-automaton").start_animation("make_it_rain")
-end)
-
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end)
+vim.keymap.set("n", "<leader><leader>", vim.cmd.so)
 
