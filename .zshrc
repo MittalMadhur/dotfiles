@@ -10,6 +10,7 @@ plugins=(
   git
   zsh-syntax-highlighting
   zsh-autosuggestions
+  bazel
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -84,8 +85,7 @@ POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Set Git alias
+alias gp='git pull'
 alias gs='git status'
-
-# Set bazel cmds
-# source <(bazel completion bash)
+alias gc='git commit -m'
 
